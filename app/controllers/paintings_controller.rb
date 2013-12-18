@@ -68,7 +68,7 @@ class PaintingsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def painting_params
-      params.require(:painting).permit(:name)
-    end
+  def painting_params
+    params.require(:painting).permit(:name, :image, :remote_image_url)
+  end
 end
