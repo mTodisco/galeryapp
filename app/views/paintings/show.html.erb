@@ -5,5 +5,7 @@
   <%= @painting.name %>
 </p>
 
+<td><%= image_tag @painting.image_url(:normal) if @painting.image? %></td>
+<br>
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
 <%= link_to 'Back', paintings_path %>

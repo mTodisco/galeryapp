@@ -14,6 +14,7 @@
     <% @paintings.each do |painting| %>
       <tr>
         <td><%= painting.name %></td>
+        <td><%= image_tag painting.image_url(:thumb) if painting.image? %></td>
         <td><%= link_to 'Show', painting %></td>
         <td><%= link_to 'Edit', edit_painting_path(painting) %></td>
         <td><%= link_to 'Destroy', painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
